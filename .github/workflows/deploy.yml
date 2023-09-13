@@ -16,8 +16,8 @@ jobs:
       ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
     runs-on: ubuntu-latest
   
-    steps:
-    - uses: actions/checkout@v3
+steps:
+- uses: actions/checkout@v3
 - uses: hashicorp/setup-terraform@v2
 
 - name: Terraform fmt
@@ -95,3 +95,7 @@ jobs:
           body: output
         })
       }
+
+
+
+      
