@@ -1,23 +1,12 @@
 terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-    }
-  }
-
-/*   # Update this block with the location of your terraform state file
-  backend "azurerm" {
-    resource_group_name  = "rg-terraform-github-actions-state"
-    storage_account_name = "terraformgithubactions"
-    container_name       = "tfstate"
-    key                  = "terraform.tfstate"
-  } */
+ 
 }
-
+ 
 provider "azurerm" {
+
+  version = "~>2.0"
   features {}
 }
-
 
 resource "azurerm_resource_group" "example" {
   name     = "rg-terraform-demo"
