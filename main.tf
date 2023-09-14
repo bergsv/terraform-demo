@@ -27,6 +27,16 @@ resource "azurerm_resource_group" "example" {
   location = "westus2"
 }
 
+resource "azurerm_resource_group" "example" {
+  name     = "rg-terraform-demo3"
+  location = "westus2"
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = "rg-terraform-demo5"
+  location = "westus2"
+}
+
 /* resource "azurerm_virtual_network" "example" {
   name                = "vnet-terraform-demo"
   address_space       = ["10.0.0.0/16"]
