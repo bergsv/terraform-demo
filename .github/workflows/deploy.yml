@@ -26,8 +26,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with:
+          ref: ${{ github.event.pull_request.head.ref }}
           terraform_version: ${{ env.TF_VERSION }}
 
       - name: Terraform fmt
