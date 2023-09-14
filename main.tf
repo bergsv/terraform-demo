@@ -23,7 +23,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "rg-terraform-demos2se"
+  name     = "rg-terraform-demo2"
   location = "westus2"
 }
 
