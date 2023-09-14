@@ -1,7 +1,9 @@
 name: Generate terraform docs
 on: workflow_dispatch
 
-permissions: write-all
+permissions: 
+  contents: write
+  
 jobs:
   docs:
     runs-on: ubuntu-latest
