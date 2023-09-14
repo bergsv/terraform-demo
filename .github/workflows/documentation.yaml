@@ -1,6 +1,6 @@
 name: Generate terraform docs
-on:
-  - pull_request
+on: workflow_dispatch
+
 permissions: write-all
 jobs:
   docs:
