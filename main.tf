@@ -22,18 +22,8 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "rg-terraform-demo2"
-  location = "westus2"
-}
-
-resource "azurerm_resource_group" "example2" {
-  name     = "rg-terraform-demo3"
-  location = "westus2"
-}
-
-resource "azurerm_resource_group" "example3" {
-  name     = "rg-terraform-demo5"
+resource "azurerm_resource_group" "example10" {
+  name     = "rg-terraform-demo10"
   location = "westus2"
 }
 
