@@ -52,13 +52,3 @@ jobs:
       - name: Terraform apply
         id: apply
         run: terraform apply -auto-approve plan.tf
-
-  terraform2:
-    name: 'Deployment Production'
-    runs-on: ubuntu-latest
-    environment: prod
-    needs: terraform
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
