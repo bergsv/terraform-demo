@@ -23,6 +23,7 @@ provider "azurerm" {
 }
 
 /* 
+
 resource "azurerm_resource_group" "database" {
   name     = "rg-${var.environment}-database"
   location = "westeurope"
