@@ -22,7 +22,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "example10" {
+resource "azurerm_resource_group" "example" {
   name     = "rg-${var.environment}"
   location = "westeurope"
 }
