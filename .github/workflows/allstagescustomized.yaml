@@ -13,7 +13,7 @@ jobs:
   development:
     name: 'Deploy Development'
     runs-on: ubuntu-latest
-    environment: dev
+    environment: prod
     env:
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
@@ -38,7 +38,7 @@ jobs:
 
       - name: Terraform init
         id: init
-        run: terraform init -var environment=$TF_VAR_ENV
+        run: terraform init
 
       - name: Terraform validate
         id: validate
