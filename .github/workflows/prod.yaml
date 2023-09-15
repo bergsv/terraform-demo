@@ -1,7 +1,7 @@
 on:
   push:
-    paths:
-    - 'production.tf'
+    branches:
+    - 'main'
 
 permissions:
   id-token: write
