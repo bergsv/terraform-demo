@@ -24,7 +24,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "example10" {
   name     = var.rg_name
-  location = "westus2"
+  location = "westeurope"
 }
 
 /* resource "azurerm_virtual_network" "example" {
