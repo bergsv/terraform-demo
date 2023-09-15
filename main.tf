@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "tfstate"
     storage_account_name = "tfstate17896"
     container_name       = "tfstate"
-    key                  = "prod.terraform.tfstate"
+    key                  = "$(var.environment).terraform.tfstate"
     use_oidc             = true
     subscription_id      = "dbbf7928-cbf2-4ffd-80d1-3c35b6cce5aa"
     tenant_id            = "0e3d417e-c425-4353-92d0-406535d8b62b"
@@ -23,7 +23,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example10" {
-  name     = "rg-${var.rg_name}"
+  name     = "rg-${var.environment}"
   location = "westeurope"
 }
 

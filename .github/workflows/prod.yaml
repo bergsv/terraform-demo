@@ -47,7 +47,7 @@ jobs:
 
       - name: Terraform plan
         id: plan
-        run: terraform plan -no-color -var rg_name=$TF_VAR_ENV -out=plan.tf
+        run: terraform plan -no-color -var environment=$TF_VAR_ENV -out=plan.tf
 
       - name: Terraform apply
         id: apply

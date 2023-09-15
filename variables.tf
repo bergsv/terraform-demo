@@ -1,4 +1,4 @@
-variable "rg_name" {
+variable "environment" {
   type        = string
   description = "GitHub Action Variable"
 }
