@@ -53,7 +53,7 @@ jobs:
         id: apply
         run: terraform apply -auto-approve plan.tf
 
-  production:
+ production:
     name: 'Deploy to Prod'
     runs-on: ubuntu-latest
     environment: prod
