@@ -7,7 +7,7 @@ permissions:
   id-token: write
   contents: read
 
-name: On Release Main
+name: Prod Deployment
 
 jobs:
   terraform:
