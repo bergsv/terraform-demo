@@ -23,7 +23,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example10" {
-  name     = ${var.rg_name}
+  name     = var.rg_name
   location = "westus2"
 }
 
