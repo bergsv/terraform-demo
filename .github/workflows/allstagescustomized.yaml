@@ -10,7 +10,7 @@ permissions:
 name: Deployment Chain
 
 jobs:
- terraform:
+ development:
     name: 'Deploy to Dev'
     runs-on: ubuntu-latest
     environment: dev
@@ -53,7 +53,7 @@ jobs:
         id: apply
         run: terraform apply -auto-approve plan.tf
 
-  terraform:
+  production:
     name: 'Deploy to Prod'
     runs-on: ubuntu-latest
     environment: prod
