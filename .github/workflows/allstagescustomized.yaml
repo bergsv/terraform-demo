@@ -46,11 +46,11 @@ jobs:
 
       - name: Terraform plan
         id: plan
-        run: terraform plan -no-color -var environment=$TF_VAR_ENV 
+        run: terraform plan -no-color -var environment=$TF_VAR_ENV -out=$TF_VAR_ENV.tf
 
       - name: Terraform apply
         id: apply
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve $TF_VAR_ENV.tf
 
   production:
     name: 'Deploy Production'
