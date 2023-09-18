@@ -43,7 +43,7 @@ jobs:
 
       - name: Terraform init
         id: init
-        run: terraform init
+        run: terraform init -backend-config="${TF_BACKEND_CONFIG}"
 
       - name: Terraform validate
         id: validate
@@ -95,7 +95,7 @@ jobs:
 
       - name: Terraform init
         id: init
-        run: terraform init
+        run: terraform init -backend-config="${TF_BACKEND_CONFIG}"
 
       - name: Terraform validate
         id: validate
