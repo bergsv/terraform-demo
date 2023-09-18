@@ -1,6 +1,6 @@
 on:
   workflow_run:
-    workflows: ["Deployment"]
+    workflows: ["Deployment Development"]
     types:
       - completed
 
@@ -8,13 +8,13 @@ permissions:
   id-token: write
   contents: read
 
-name:  Deployment Step 2
+name: Deployment Production
 
 jobs:
   production:
-    name: 'Deploy Development'
+    name: 'Deploy Production'
     runs-on: ubuntu-latest
-    environment: dev
+    environment: prod
     env:
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
