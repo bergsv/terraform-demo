@@ -41,14 +41,6 @@ jobs:
         id: fmt
         run: terraform fmt -check
 
-      - name: Terraform create workspace
-        id: workspace
-        run: terraform workspace new dev
-
-      - name: Terraform select workspace
-        id: selectworkspace
-        run: terraform workspace select dev
-
       - name: Terraform init
         id: init
         run: terraform init
