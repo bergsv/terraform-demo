@@ -36,6 +36,10 @@ jobs:
         id: fmt
         run: terraform fmt -check
 
+      - name: Terraform fmt
+        id: workspace
+        run: terraform workspace new dev
+        
       - name: Terraform init
         id: init
         run: terraform init
@@ -78,6 +82,10 @@ jobs:
       - name: Terraform fmt
         id: fmt
         run: terraform fmt -check
+
+      - name: Terraform fmt
+        id: workspace
+        run: terraform workspace new prod
 
       - name: Terraform init
         id: init
