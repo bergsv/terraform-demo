@@ -27,8 +27,3 @@ resource "azurerm_resource_group" "database" {
   name     = "rg-${var.environment}-database"
   location = "westeurope"
 }
-
-resource "azurerm_resource_group" "webapp" {
-  name     = "rg-${var.environment}-webapp"
-  location = "westeurope"
-}
